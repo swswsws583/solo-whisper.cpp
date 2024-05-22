@@ -46,8 +46,8 @@ for input_mp4 in "${input_files[@]}"; do
         echo "The output WAV file has less than three channels. No downmixing needed."
     fi
 
-    # Change the working directory to /Users/swswswsolo/whisper.cpp
-    cd /Users/swswswsolo/whisper.cpp
+    # Change the working directory to ~/whisper.cpp
+    cd ~/whisper.cpp
 
     # Get the file name of the input WAV file without the extension
     file_name=$(basename "$output_wav" .wav)
