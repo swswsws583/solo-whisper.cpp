@@ -39,7 +39,7 @@
 set -Eeuo pipefail
 
 # get script file location
-SCRIPT_PATH="$(realpath -e ${BASH_SOURCE[0]})";
+SCRIPT_PATH="$(realpath ${BASH_SOURCE[0]})";
 SCRIPT_DIR="${SCRIPT_PATH%/*}"
 
 ################################################################################
@@ -49,7 +49,7 @@ SCRIPT_DIR="${SCRIPT_PATH%/*}"
 # note: unless a multilingual model is specified, WHISPER_LANG will be ignored
 # and the video will be transcribed as if the audio were in the English language
 ################################################################################
-MODEL_PATH="${MODEL_PATH:-${SCRIPT_DIR}/../models/ggml-base.en.bin}"
+MODEL_PATH="${MODEL_PATH:-${SCRIPT_DIR}/../models/ggml-large-v2.bin}"
 
 ################################################################################
 # Where to find the whisper.cpp executable.  default to the examples directory
